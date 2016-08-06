@@ -10,5 +10,7 @@
   <%= @snippet.content %>
 </p>
 
+<%= image_tag(@snippet.image_url).to_s %>
+
 <%= link_to 'Edit', edit_snippet_path(@snippet) %> |
 <%= link_to 'Back', snippets_path %>
