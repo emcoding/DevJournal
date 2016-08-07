@@ -28,16 +28,16 @@
         <p class="card-text"><%= snippet.content %></p>
       </div>
       <div class="card-block">
-        <small>
-          <%= snippet.created_at.strftime("%B %e") %>
+        <p><small>
+          <%= snippet.created_at.strftime("%B %e") %> <%= link_to snippet, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+            <% end %>
         </small>
-        <small>
-          <div class="card-link">
-            <%= link_to 'Destroy', snippet, method: :delete, data: { confirm: 'Are you sure?' } %>
-          </div>
-        </small>
-        </div>
-        <div class="card-footer text-muted">tags</div>
+        </p>
+      </div>
+      <div class="card-footer text-muted">
+        tags
+      </div>
     </div><!-- /. card -->
   <% end %>
 </div><!--end columns-->
