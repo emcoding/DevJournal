@@ -7,7 +7,7 @@
 
 <p>
   <strong>Content:</strong>
-  <%= @snippet.content %>
+  <%= markdown(@snippet.content).html_safe %>
 </p>
 
 <%= image_tag(@snippet.image_url.to_s) %>

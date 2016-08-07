@@ -40,6 +40,9 @@ gem 'bootstrap', '~> 4.0.0.alpha3.1'
 gem 'carrierwave'
 gem 'mini_magick' # for different versions of an image
 
+# Markdown
+gem 'redcarpet' # for markdown
+
 ##################
 
 group :development, :test do
