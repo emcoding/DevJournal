@@ -31,8 +31,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 ##################
-
 # Gems added
+
+# Styling
+gem 'bootstrap', '~> 4.0.0.alpha3.1'
 
 # File uploader
 gem 'carrierwave'

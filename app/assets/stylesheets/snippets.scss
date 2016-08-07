@@ -1,3 +1,14 @@
 // Place all the styles related to the Snippets controller here.
-// They will automatically be included in application.css.
+// They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+//Doesn't work, no change in cnumber of columns on display
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 5;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 6;
+  }
+}

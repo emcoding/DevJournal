@@ -1,31 +1,40 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Snippets</h1>
+<div class="card-columns">
+  <!--first card: new snippet-->
+  <div class="card card-outline-success">
+    <h6 class="card-header">Add a snippet</h6>
+    <div class="card-block">
+      <h4 class="card-title">
+        <p><%= link_to new_snippet_path do %>
+            <span class="fa fa-plus-circle fa-5x" aria-hidden="true"></span>
+            <% end %></p>
+      </h4>
+    </div>
+  </div>
+  <!--snippets cards-->
+  <% @snippets.each do |snippet| %>
+    <div class="card ">
+      <div class="card-block">
+        <h4 class="card-title"><%= link_to snippet.title, edit_snippet_path(snippet) %>
+        </h4>
+      </div>
+      <div class="card-block">
+        <%= image_tag(snippet.image_url(:thumb).to_s, class: "card-img-top")%>
+      </div>
+      <div class="card-block">
+        <p class="card-text"><%= snippet.content %></p>
+      </div>
+      <div class="card-block">
+        <small><%= snippet.created_at.strftime("%B %e") %> </small>
+      </div>
+      <div class="card-footer text-muted">
+        tags<%= link_to snippet, method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <i class="fa fa-trash-o fa-2x pull-right" aria-hidden="true"></i>
+        <% end %>
+      </div>
+    </div><!-- /.card -->
+  <% end %><!-- end of snippets -->
+</div><!-- /.columns-->
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @snippets.each do |snippet| %>
-      <tr>
-        <td><%= snippet.created_at.strftime("%B %e") %></td>
-        <td><%= snippet.title %></td>
-        <td><%= snippet.content %></td>
-        <td><%= image_tag(snippet.image_url(:thumb)).to_s %></td>
-        <td><%= link_to 'Show', snippet %></td>
-        <td><%= link_to 'Edit', edit_snippet_path(snippet) %></td>
-        <td><%= link_to 'Destroy', snippet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Snippet', new_snippet_path %>
