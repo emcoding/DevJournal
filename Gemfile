@@ -34,6 +34,10 @@ gem 'jbuilder', '~> 2.5'
 
 # Gems added
 
+# Styling
+gem 'bootstrap', '~> 4.0.0.alpha3.1'
+
+
 # File uploader
 gem 'carrierwave'
 gem 'mini_magick' # for different versions of an image
