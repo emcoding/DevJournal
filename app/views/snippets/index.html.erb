@@ -12,11 +12,8 @@
       </h4>
     </div>
   </div>
-
-
-
+  <!--snippets cards-->
   <% @snippets.each do |snippet| %>
-  <!--<div class="col-sm-4">-->
     <div class="card ">
       <div class="card-block">
         <h4 class="card-title"><%= link_to snippet.title, edit_snippet_path(snippet) %>
@@ -29,26 +26,15 @@
         <p class="card-text"><%= snippet.content %></p>
       </div>
       <div class="card-block">
-        <p><small>
-          <%= snippet.created_at.strftime("%B %e") %> </small>
-
-        </p>
+        <small><%= snippet.created_at.strftime("%B %e") %> </small>
       </div>
       <div class="card-footer text-muted">
         tags<%= link_to snippet, method: :delete, data: { confirm: 'Are you sure?' } do %>
             <i class="fa fa-trash-o fa-2x pull-right" aria-hidden="true"></i>
         <% end %>
       </div>
-    </div><!-- /. card -->
-  <% end %>
-</div><!--end columns-->
-
-        <!--<td><%#= image_tag(snippet.image_url(:thumb).to_s) %></td>-->
-        <!--<td><%#= link_to 'Show', snippet %></td>-->
-        <!--<td><%#= link_to 'Edit', edit_snippet_path(snippet) %></td>-->
-
-
-
-
+    </div><!-- /.card -->
+  <% end %><!-- end of snippets -->
+</div><!-- /.columns-->
 
 
