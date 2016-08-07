@@ -1,61 +1,48 @@
 <p id="notice"><%= notice %></p>
-<div class="row">
-  <div class="col-sm-12">
 
-    <!--cards grouping-->
-
-    <div class="card-deck">
-      <div class="col-sm-4">
-        <!--first card: new snippet-->
-          <div class="card" style="width: 18rem;">
-            <h6 class="card-header">Add a snippet</h6>
-            <div class="card-block">
-              <h4 class="card-title"><%= link_to 'New Snippet', new_snippet_path %></h4></div>        <div class="card-block">
-              <p>Hier maak je een nieuwe snippet
-            </div>
-          </div>
-        </div>
-
-
-      <% @snippets.each do |snippet| %>
-      <div class="col-sm-4">
-        <div class="card card-outline-primary">
-          <div class="card-block">
-            <h4 class="card-title"><%= link_to snippet.title, edit_snippet_path(snippet) %></h4>
-          </div>
-          <div class="card-block">
-            <%= image_tag(snippet.image_url(:thumb).to_s, class: "card-img-top")%>
-          </div>
-          <div class="card-block">
-            <p class="card-text"><%= snippet.content %></p>
-          </div>
-          <div class="card-block">
-            <small><%= snippet.created_at.strftime("%B %e") %></small>
-              <small>
-                <div class="card-link">
-                  <%= link_to 'Destroy', snippet, method: :delete, data: { confirm: 'Are you sure?' } %>
-                </div>
-              </small>
-
-            </div>
-          <div class="card-footer text-muted">tags</div>
-        </div><!-- /. card -->
-
-      </div>
-        <% end %>
-        <!--end between div col and before div card-group-->
+<div class="card-columns">
+  <!--first card: new snippet-->
+  <div class="card card-inverse card-success">
+    <h6 class="card-header">Add a snippet</h6>
+    <div class="card-block">
+      <h4 class="card-title"><%= link_to 'New Snippet', new_snippet_path %></h4></div>        <div class="card-block">
+      <p>Hier maak je een nieuwe snippet
     </div>
-
   </div>
-</div><!--end of row -->
 
-      <!--<tr>-->
-        <!--<td>
+
+
+  <% @snippets.each do |snippet| %>
+  <!--<div class="col-sm-4">-->
+    <div class="card ">
+      <div class="card-block">
+        <h4 class="card-title"><%= link_to snippet.title, edit_snippet_path(snippet) %></h4>
+      </div>
+      <div class="card-block">
+        <%= image_tag(snippet.image_url(:thumb).to_s, class: "card-img-top")%>
+      </div>
+      <div class="card-block">
+        <p class="card-text"><%= snippet.content %></p>
+      </div>
+      <div class="card-block">
+        <small>
+          <%= snippet.created_at.strftime("%B %e") %>
+        </small>
+        <small>
+          <div class="card-link">
+            <%= link_to 'Destroy', snippet, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        </small>
+        </div>
+        <div class="card-footer text-muted">tags</div>
+    </div><!-- /. card -->
+  <% end %>
+</div><!--end columns-->
+
         <!--<td><%#= image_tag(snippet.image_url(:thumb).to_s) %></td>-->
         <!--<td><%#= link_to 'Show', snippet %></td>-->
         <!--<td><%#= link_to 'Edit', edit_snippet_path(snippet) %></td>-->
-        <!--<td></td>-->
-      <!--</tr>-->
+
 
 
 
