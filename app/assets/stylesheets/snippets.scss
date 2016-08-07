@@ -3,10 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-#card-title {
-  color: $brand-primary
-}
-
 //Doesn't work, no change in cnumber of columns on display
 .card-columns {
   @include media-breakpoint-only(lg) {

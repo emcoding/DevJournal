@@ -7,7 +7,7 @@
     <div class="card-block">
       <h4 class="card-title">
         <p><%= link_to new_snippet_path do %>
-            <span class="fa fa-spin fa-plus-circle fa-4x" aria-hidden="true"></span>
+            <span class="fa fa-plus-circle fa-5x" aria-hidden="true"></span>
             <% end %></p>
       </h4>
     </div>
@@ -19,7 +19,8 @@
   <!--<div class="col-sm-4">-->
     <div class="card ">
       <div class="card-block">
-        <h4 class="card-title"><%= link_to snippet.title, edit_snippet_path(snippet) %></h4>
+        <h4 class="card-title"><%= link_to snippet.title, edit_snippet_path(snippet) %>
+        </h4>
       </div>
       <div class="card-block">
         <%= image_tag(snippet.image_url(:thumb).to_s, class: "card-img-top")%>
@@ -29,14 +30,14 @@
       </div>
       <div class="card-block">
         <p><small>
-          <%= snippet.created_at.strftime("%B %e") %> <%= link_to snippet, method: :delete, data: { confirm: 'Are you sure?' } do %>
-                <i class="fa fa-trash-o" aria-hidden="true"></i>
-            <% end %>
-        </small>
+          <%= snippet.created_at.strftime("%B %e") %> </small>
+
         </p>
       </div>
       <div class="card-footer text-muted">
-        tags
+        tags<%= link_to snippet, method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <i class="fa fa-trash-o fa-2x pull-right" aria-hidden="true"></i>
+        <% end %>
       </div>
     </div><!-- /. card -->
   <% end %>
