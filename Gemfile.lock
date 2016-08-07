@@ -96,11 +96,7 @@ GEM
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
     pkg-config (1.1.7)
-    posix-spawn (0.3.11)
     puma (3.6.0)
-    pygments.rb (0.6.3)
-      posix-spawn (~> 0.3.6)
-      yajl-ruby (~> 1.2.0)
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -169,7 +165,6 @@ GEM
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
-    yajl-ruby (1.2.1)
 
 PLATFORMS
   ruby
@@ -184,7 +179,6 @@ DEPENDENCIES
   listen (~> 3.0.5)
   mini_magick
   puma (~> 3.0)
-  pygments.rb
   rails (~> 5.0.0)
   redcarpet
   sass-rails (~> 5.0)

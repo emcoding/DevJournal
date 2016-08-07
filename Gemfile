@@ -42,7 +42,6 @@ gem 'mini_magick' # for different versions of an image
 
 # Markdown
 gem 'redcarpet' # for markdown
-gem 'pygments.rb' # for syntax highlighting
 
 ##################
 
