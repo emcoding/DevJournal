@@ -1,4 +1,5 @@
 <%= form_for(snippet) do |f| %>
+
   <% if snippet.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
@@ -11,22 +12,28 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
 
-  <div class="field">
-    <%= f.label :content %>
-    <%= f.text_area :content %>
-  </div>
+    <div class="card card-inverse card-success col-sm-8">
+      <h6 class="card-header">Add a snippet</h6>
+      <div class="form-group">
+      <div class="card-block">
+        <h4 class="card-title ">
+          <%= f.label :title, class:'sr-only' %>
+          <%= f.text_field :title, autofocus: true, placeholder: 'title', class: 'form-control' %>
+        </h4>
+      </div>
 
-  <div class="field">
-    <p>add an image....</p>
-    <%= f.file_field :image %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+      <div class="card-block">
+          <%= f.label :content, class: 'sr-only' %>
+          <%= f.text_area :content, rows: 10, class: 'form-control' %>
+      </div>
+      <div class="card-block">
+        <small class="form-text">Add an image</small>
+        <%= f.file_field :image, class: 'form-control' %>
+      </div>
+      <div class="card-block">
+        <%= f.submit "OK", class: 'btn btn-secondary btn-lg' %>
+      </div>
+    </div>
   </div>
 <% end %>
