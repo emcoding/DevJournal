@@ -23,7 +23,7 @@
         <%= image_tag(snippet.image_url(:thumb).to_s, class: "card-img-top")%>
       </div>
       <div class="card-block">
-        <p class="card-text"><%= snippet.content %></p>
+        <p class="card-text"><%= markdown(snippet.content).html_safe %></p>
       </div>
       <div class="card-block">
         <small><%= snippet.created_at.strftime("%B %e") %> </small>
