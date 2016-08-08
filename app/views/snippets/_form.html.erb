@@ -1,11 +1,11 @@
-<%= form_for(snippet) do |f| %>
+<%= form_for(@snippet) do |f| %>
 
-  <% if snippet.errors.any? %>
+  <% if @snippet.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
 
       <ul>
-      <% snippet.errors.full_messages.each do |message| %>
+      <% @snippet.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -13,7 +13,7 @@
   <% end %>
 
 
-    <div class="card card-inverse card-success col-sm-8">
+    <div class="card card-inverse card-success col-sm-12 col-md-12">
       <h6 class="card-header">Add a snippet</h6>
       <div class="form-group">
       <div class="card-block">
@@ -34,6 +34,9 @@
       <div class="card-block">
         <%= f.button :submit, class: "btn btn-primary btn-inverse" do %>
             <i class='fa fa-plus-circle fa-4x'></i>
+        <% end %>
+        <%= link_to snippets_path, class: "btn btn-primary btn-inverse" do%>
+            <i class="fa fa-chevron-circle-left fa-4x" aria-hidden="true"></i>
         <% end %>
 
       </div>
