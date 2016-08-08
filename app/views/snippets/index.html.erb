@@ -1,17 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<div class="card-columns">
-  <!--first card: new snippet-->
-  <div class="card card-outline-success">
-    <h6 class="card-header">Add a snippet</h6>
-    <div class="card-block">
+  <div id='new_form_link'>
       <h4 class="card-title">
-        <p><%= link_to new_snippet_path do %>
-            <span class="fa fa-plus-circle fa-5x" aria-hidden="true"></span>
+        <p><%= link_to new_snippet_path, remote: true do %>
+            <i class="fa fa-plus-circle fa-5x" aria-hidden="true"></i>
             <% end %></p>
       </h4>
-    </div>
   </div>
+
+<div class="card-columns">
   <!--snippets cards-->
   <% @snippets.each do |snippet| %>
     <div class="card ">
@@ -29,12 +26,10 @@
         <small><%= snippet.created_at.strftime("%B %e") %> </small>
       </div>
       <div class="card-footer text-muted">
-        tags<%= link_to snippet, method: :delete, data: { confirm: 'Are you sure?' } do %>
+        tags<%= link_to snippet, method: :delete, data: { confirm: 'Are you sure?' }, remote: true do %>
             <i class="fa fa-trash-o pull-right" style='position: relative; top: 5px' aria-hidden="true"></i>
         <% end %>
       </div>
     </div><!-- /.card -->
   <% end %><!-- end of snippets -->
 </div><!-- /.columns-->
-
-

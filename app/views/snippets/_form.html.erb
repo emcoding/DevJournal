@@ -1,42 +1,38 @@
-<%= form_for(snippet) do |f| %>
+<%= form_for @snippet, remote: true do |f| %>
 
-  <% if snippet.errors.any? %>
+  <% if @snippet.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
 
       <ul>
-      <% snippet.errors.full_messages.each do |message| %>
+      <% @snippet.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-
-    <div class="card card-inverse card-success col-sm-8">
-      <h6 class="card-header">Add a snippet</h6>
-      <div class="form-group">
-      <div class="card-block">
-        <h4 class="card-title ">
-          <%= f.label :title, class:'sr-only' %>
-          <%= f.text_field :title, autofocus: true, placeholder: 'title', class: 'form-control' %>
-        </h4>
-      </div>
-
-      <div class="card-block">
-          <%= f.label :content, class: 'sr-only' %>
-          <%= f.text_area :content, rows: 10, class: 'form-control' %>
-      </div>
-      <div class="card-block">
-        <small class="form-text">Add an image</small>
-        <%= f.file_field :image, multiple: true, name: 'snippet[image]', class: 'form-control', id: 'new_image' %>
-      </div>
+  <div class="card card-inverse card-success col-sm-12">
+    <h6 class="card-header">Add a snippet</h6>
+    <div class="form-group">
+    <div class="card-block">
+      <h4 class="card-title ">
+        <%= f.label :title, class:'sr-only' %>
+        <%= f.text_field :title, autofocus: true, placeholder: 'title', class: 'form-control' %>
+      </h4>
+        <%= f.label :content, class: 'sr-only' %>
+        <%= f.text_area :content, rows: 10, class: 'form-control' %>
+      <small class="form-text">Add an image</small>
+      <%= f.file_field :image, multiple: true, name: 'snippet[image]', class: 'form-control', id: 'new_image' %>
       <div class="card-block">
         <%= f.button :submit, class: "btn btn-primary btn-inverse" do %>
             <i class='fa fa-plus-circle fa-4x'></i>
         <% end %>
-
+        <%= link_to snippets_path, class: "btn btn-primary btn-inverse" do%>
+            <i class="fa fa-chevron-circle-left fa-4x" aria-hidden="true"></i>
+        <% end %>
       </div>
     </div>
   </div>
 <% end %>
+</div>
