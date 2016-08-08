@@ -29,7 +29,7 @@
       </div>
       <div class="card-block">
         <small class="form-text">Add an image</small>
-        <%= f.file_field :image, class: 'form-control' %>
+        <%= f.file_field :image, multiple: true, name: 'snippet[image]', class: 'form-control', id: 'new_image' %>
       </div>
       <div class="card-block">
         <%= f.button :submit, class: "btn btn-primary btn-inverse" do %>
