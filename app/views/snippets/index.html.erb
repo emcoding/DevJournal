@@ -1,15 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-  <!--first card: new snippet-->
   <div id='new_form_link'>
-    <!--<h6 class="card-header">Add a snippet</h6>-->
-    <!--<div class="card-block">-->
       <h4 class="card-title">
         <p><%= link_to new_snippet_path, remote: true do %>
             <i class="fa fa-plus-circle fa-5x" aria-hidden="true"></i>
             <% end %></p>
       </h4>
-    <!--</div>-->
   </div>
 
 <div class="card-columns">
@@ -37,5 +33,3 @@
     </div><!-- /.card -->
   <% end %><!-- end of snippets -->
 </div><!-- /.columns-->
-
-
