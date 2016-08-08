@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<div class="card-columns">
+
   <!--first card: new snippet-->
   <div class="card card-outline-success", id='new_form_link'>
-    <h6 class="card-header">Add a snippet</h6>
+    <!--<h6 class="card-header">Add a snippet</h6>-->
     <div class="card-block">
       <h4 class="card-title">
         <p><%= link_to new_snippet_path, remote: true do %>
@@ -12,6 +12,8 @@
       </h4>
     </div>
   </div>
+
+<div class="card-columns">
   <!--snippets cards-->
   <% @snippets.each do |snippet| %>
     <div class="card ">
