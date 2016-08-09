@@ -32,7 +32,7 @@ class SnippetsController < ApplicationController
 
     respond_to do |format|
       if @snippet.save
-        format.html { redirect_to snippets_path, notice: 'Snippet was successfully created.' }
+        format.html { redirect_to snippets_path }
         format.json { render :show, status: :created, location: @snippet }
       else
         format.html { render :new }
@@ -46,7 +46,7 @@ class SnippetsController < ApplicationController
   def update
     respond_to do |format|
       if @snippet.update(snippet_params)
-        format.html { redirect_to action: :index, notice: 'Snippet was successfully updated.' }
+        format.html { redirect_to action: :index }
         format.json { render :show, status: :ok, location: @snippet }
       else
         format.html { render :edit }
@@ -60,7 +60,7 @@ class SnippetsController < ApplicationController
   def destroy
     @snippet.destroy
     respond_to do |format|
-      format.html { redirect_to snippets_url, notice: 'Snippet was successfully destroyed.' }
+      format.html { redirect_to snippets_url }
       format.json { head :no_content }
     end
   end
