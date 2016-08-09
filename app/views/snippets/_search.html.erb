@@ -1,0 +1,14 @@
+
+   <div class="form-inline pull-xs-right">
+      <%= form_tag(snippets_path, method: 'get', id: 'search-form', role: 'search') do %>
+         <small><%= text_field_tag :search, params[:search], placeholder: 'Search in snippets' %></small>
+          <%= submit_tag "Find", class: "btn btn-sm btn-outline-success" %>
+            <small><%= link_to_if(params[:search].present?, "Clear", snippets_path) do %>
+          <a></a></small>
+    <% end %>
+  </div>
+
+    <%# if params[:search].nil? %>
+        <!--<p>Ooops, I can't find a snippet about <%#= params[:search] %> Want to join us?</p>-->
+    <!--<%# end %>-->
+    <% end %>
