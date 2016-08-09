@@ -3,6 +3,9 @@ $enable-flex:               true !default;
 
 $btn-primary-color:         $brand-primary !default;
 $btn-primary-bg:            #fff !default;
+$link-hover-decoration:     none !default;
 
 //$grid-columns:      5 !default;
 $grid-gutter-width: 40px;
+
+body { padding-top: 40px; }

@@ -4,7 +4,11 @@ class SnippetsController < ApplicationController
   # GET /snippets
   # GET /snippets.json
   def index
-    @snippets = Snippet.all.reverse_order
+    if params[:search]
+      @snippets = Snippet.search(params[:search])
+    else
+      @snippets = Snippet.all.reverse_order
+    end
   end
 
   # GET /snippets/1
