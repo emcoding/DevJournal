@@ -25,6 +25,7 @@
       <small class="form-text">Add an image</small>
       <%= f.file_field :image, class: 'form-control', id: 'new_image' %>
       <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <%= f.check_box :remove_image %>Remove avatar
       <div class="card-block">
         <%= f.button :submit, class: "btn btn-primary btn-inverse" do %>
             <i class='fa fa-plus-circle fa-4x'></i>
