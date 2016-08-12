@@ -43,6 +43,9 @@ gem 'mini_magick' # for different versions of an image
 # Markdown
 gem 'redcarpet' # for markdown
 
+# Tags
+gem 'acts-as-taggable-on', :git => 'https://github.com/mbleigh/acts-as-taggable-on'
+
 ##################
 
 group :development, :test do

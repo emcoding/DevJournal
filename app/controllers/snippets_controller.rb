@@ -5,7 +5,9 @@ class SnippetsController < ApplicationController
   # GET /snippets.json
   def index
     if params[:search]
-      @snippets = Snippet.search(params[:search])
+      @snippets = Snippet.search(params[:search]).reverse_order
+    elsif params[:tag]
+      @snippets = Snippet.tagged_with(params[:tag]).reverse_order
     else
       @snippets = Snippet.all.reverse_order
     end
@@ -73,6 +75,6 @@ class SnippetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def snippet_params
-      params.require(:snippet).permit(:title, :content, :image, :remove_image)
+      params.require(:snippet).permit(:title, :content, :tag_list, :image, :remove_image)
     end
 end

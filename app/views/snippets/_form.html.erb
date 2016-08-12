@@ -20,6 +20,14 @@
         <%= f.label :title, class:'sr-only' %>
         <%= f.text_field :title, autofocus: true, placeholder: 'title', class: 'form-control' %>
       </h4>
+
+      <div class="input-group">
+        <div class="input-group-addon">
+          <i class ='fa fa-tag'></i>
+        </div>
+        <%= f.text_field :tag_list, placeholder: 'tag1, tag2, one tag, ', value: @snippet.tag_list.to_s%>
+      </div>
+
         <%= f.label :content, class: 'sr-only' %>
         <%= f.text_area :content, rows: 15, class: 'form-control' %>
       <small class="form-text">Add an image</small>
