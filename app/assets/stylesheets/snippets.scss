@@ -2,14 +2,28 @@
 // They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// Navbar
+//
+// Move body away from nav bar
+body { padding-top: 40px; }
 
-//Doesn't work, no change in cnumber of columns on display
-.card-columns {
-  @include media-breakpoint-only(lg) {
-    column-count: 5;
-  }
-  @include media-breakpoint-only(xl) {
-    column-count: 6;
-  }
+
+// Styling for snippet cards
+
+@mixin create-snippet-card {
+  @extend .card;
+  @extend .card-inverse;
+  @extend .card-success;
+  @extend .col-sm-12;
+
 }
 
+.snippet-card {
+  @include create-snippet-card;
+}
+
+#snip-title {
+  color: $brand-primary;
+}
+
+//
