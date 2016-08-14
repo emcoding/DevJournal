@@ -3,7 +3,7 @@
   <div id='new_form_link'>
       <h4 class="card-title">
         <p><%= link_to new_snippet_path, remote: true do %>
-            <i class="fa fa-plus-circle fa-5x" aria-hidden="true"></i>
+            <i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
             <% end %></p>
       </h4>
   </div>
@@ -12,8 +12,8 @@
   <!--snippets cards-->
   <% @snippets.each do |snippet| %>
     <div class="card">
-      <div class="card-block" id="sniptitle">
-        <h4 class="card-title"><%= link_to snippet.title.capitalize, edit_snippet_path(snippet) %>
+      <div class="card-block" id="snip-title">
+        <h4 class="card-title"><%= link_to snippet.title.capitalize, snippet_path(snippet) %>
         </h4>
       </div>
       <div class="card-block">

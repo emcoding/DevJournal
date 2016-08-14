@@ -1,16 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @snippet.title %>
-</p>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Preview</a>
+  </li>
+  <li class="nav-item">
+     <!--TODO add js to load content-->
+    <div class="nav-link"><%= link_to 'Edit', edit_snippet_path(@snippet) %> </div>
+  </li>
+</ul>
 
-<p>
-  <strong>Content:</strong>
-  <%= markdown(@snippet.content).html_safe %>
-</p>
+<div class="card">
 
-<%= image_tag(@snippet.image_url.to_s) %>
+    <div class="card-block" id="snip-title">
+      <h4 class="card-title"><%= @snippet.title.capitalize %></h4>
+    </div>
 
-<%= link_to 'Edit', edit_snippet_path(@snippet) %> |
-<%= link_to 'Back', snippets_path %>
+    <div class="card-block">
+      <%= markdown(@snippet.content).html_safe %>
+      <%= image_tag(@snippet.image_url.to_s) %>
+    </div>
+
+    <div class="card-block">
+      <%= link_to 'Edit', edit_snippet_path(@snippet) %> |
+      <%= link_to 'Back', snippets_path %>
+    </div>
+
+</div>
