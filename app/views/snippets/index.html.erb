@@ -9,6 +9,14 @@
   </div>
 
 <div class="card-columns">
+  <%= raw markdown(<<-'EOF'
+```ruby
+def rouge_me
+  puts "this is a #{'test'} for rouge"
+end
+```
+          EOF
+          ) %>
   <!--snippets cards-->
   <% @snippets.each do |snippet| %>
     <div class="card">
