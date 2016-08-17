@@ -1,7 +1,14 @@
 module ApplicationHelper
+  require 'redcarpet'
+  require 'rouge'
+  require 'rouge/plugins/redcarpet'
+
+  class HTML < Redcarpet::Render::HTML
+    include Rouge::Plugins::Redcarpet
+  end
 
   def markdown(text)
-    renderer = Redcarpet::Render::HTML.new(
+    renderer = HTML.new(
       filter_html: true,
       safe_links_only: true,
       hard_wrap: true

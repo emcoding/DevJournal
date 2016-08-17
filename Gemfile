@@ -42,6 +42,7 @@ gem 'mini_magick' # for different versions of an image
 
 # Markdown
 gem 'redcarpet' # for markdown
+gem 'rouge'     # for syntax highlighting
 
 # Tags
 gem 'acts-as-taggable-on', :git => 'https://github.com/mbleigh/acts-as-taggable-on'
