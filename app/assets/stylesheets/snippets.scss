@@ -5,11 +5,9 @@
 // Navbar
 //
 // Move body away from nav bar
-body { padding-top: 40px; }
-
+body {  padding-top: 40px;  }
 
 // Styling for snippet cards
-
 @mixin create-snippet-card {
   @extend .card;
   @extend .card-inverse;
@@ -22,8 +20,13 @@ body { padding-top: 40px; }
   @include create-snippet-card;
 }
 
+// font-size within cards and all children,
+//in order to reach //  /html/body/div[1]/div[2]/div[1]/div[3]/p/text()
+// and all ul and li etc withing
+.card-columns >* {
+  font-size: .9em;
+}
+
 #snip-title {
   color: $brand-primary;
 }
-
-//
