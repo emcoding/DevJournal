@@ -6,4 +6,4 @@ $(document).on "turbolinks:load", ->
     anchors.options = {
         placement: 'right'
     }
-    anchors.add('#sniptitle h4')
+    anchors.add('#snip-title h6')

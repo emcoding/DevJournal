@@ -6,7 +6,8 @@ $btn-primary-bg:            #fff !default;
 $link-hover-decoration:     none !default;
 
 //$grid-columns:      5 !default;
-$grid-gutter-width: 40px;
+$grid-gutter-width: 20px;
 
-
-
+// smaller font_sizes
+$code-font-size:              80% !default;  //default == 90%
+$pre-bg:                    #E9E9E9 !default;
