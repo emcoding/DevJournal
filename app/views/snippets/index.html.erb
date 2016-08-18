@@ -13,14 +13,11 @@
   <% @snippets.each do |snippet| %>
     <div class="card">
       <div class="card-block" id="snip-title">
-        <h6 class="card-title"><%= link_to snippet.title.capitalize, snippet_path(snippet) %>
+        <h6><%= link_to snippet.title.capitalize, snippet_path(snippet) %>
         </h6>
       </div>
-      <% unless snippet.image.file.nil? %>
-        <div class="card-block">
-          <%= image_tag(snippet.image_url(:thumb).to_s, class: "card-img-top") %>
-        </div>
-      <% end %>
+      <!--put image outside of a card-block, to get rid of padding -->
+      <%= image_tag(snippet.image_url.to_s, class: "card-img-top img-fluid") %>
       <div class="card-block card-text">
         <%= markdown(snippet.content).html_safe %>
       </div>
@@ -29,8 +26,8 @@
       </div>
       <div class="card-footer text-muted">
 
-        <i class ='fa fa-tag'></i> <%= raw snippet.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %><%= link_to snippet, method: :delete, data: { confirm: 'Are you sure?' }, remote: true do %>
-            <i class="fa fa-trash-o pull-right" style='position: relative; top: 5px' aria-hidden="true"></i>
+        <i class ='fa fa-tag'></i> <%= raw snippet.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %> <%= link_to snippet, method: :delete, data: { confirm: 'Are you sure?' }, remote: true do %>
+            <i class="fa fa-trash-o pull-right grey-link" style='position: relative; top: 5px' aria-hidden="true"></i>
         <% end %>
       </div>
     </div><!-- /.card -->

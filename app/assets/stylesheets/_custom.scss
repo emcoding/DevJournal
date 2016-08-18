@@ -1,4 +1,5 @@
 $brand-primary:             #00b33c !default;
+$brand-support:             #774f6c !default;  //also tried #aa759f
 
 $enable-flex:               true !default;
 
@@ -9,7 +10,7 @@ $link-hover-decoration:     none !default;
 //$grid-columns:      5 !default;
 $grid-gutter-width: 20px;
 
-// code and hightlights style
+// code and highlights style
 $code-font-size:              80% !default;  //default == 90%
-$code-color:                 #90a959 !default; //code in single backticks, color copied from Rouge theme
+$code-color:                $brand-support !default;
 $pre-bg:                    #E9E9E9 !default;

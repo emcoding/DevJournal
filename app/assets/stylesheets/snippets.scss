@@ -27,6 +27,18 @@ body {  padding-top: 40px;  }
   font-size: .9em;
 }
 
-#snip-title {
+.card-columns a {
+  //color: #aa759f;
+  color: $brand-support;
+}
+
+.card-columns #snip-title a {
   color: $brand-primary;
+}
+.card-footer a {
+  color: $brand-primary;
+
+  .grey-link {
+    color: $brand-support;
+  }
 }
