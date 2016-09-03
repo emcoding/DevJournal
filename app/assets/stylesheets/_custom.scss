@@ -1,16 +1,53 @@
-$brand-primary:             #00b33c !default;
-$brand-support:             #774f6c !default;  //also tried #aa759f
+// SASS style sheet */
+// Palette color codes */
+// Palette URL: http://paletton.com/#uid=7000u0k00tf0Atl03pQ0cms0BjD */
 
+// Feel free to copy&paste color codes to your application */
+
+
+// As hex codes */
+
+$color-primary-0: #E9E9E9;	// Main Primary color */
+$color-primary-1: #EAE6E6;
+$color-primary-2: #CECECE;
+$color-primary-3: #B3B2B2;
+$color-primary-4: #9C9A9A;
+
+$color-secondary-1-0: #E9E9E9;	// Main Secondary color (1) */
+$color-secondary-1-1: #EAE7E6;
+$color-secondary-1-2: #CECECE;
+$color-secondary-1-3: #B3B2B2;
+$color-secondary-1-4: #9C9B9A;
+
+$color-secondary-2-0: #8C8C8C;	// Main Secondary color (2) */
+$color-secondary-2-1: #8A8C8C;
+$color-secondary-2-2: #7B7C7C;
+$color-secondary-2-3: #6B6B6B;
+$color-secondary-2-4: #5C5E5E;
+
+$color-complement-0: #BABABA;	// Main Complement color */
+$color-complement-1: #B8BBB8;
+$color-complement-2: #A4A5A4;
+$color-complement-3: #8E8F8E;
+$color-complement-4: #7B7D7B;
+
+/// bootstrap v4 variables
+$brand-primary:             #00b33c !default;
+//$brand-support:             #774f6c !default;  //also tried #aa759f
+$brand-support:             #2f4f4f; //darkslategrey
 $enable-flex:               true !default;
+
+$card-cap-bg:               #fff !default;
+$card-bg:                   #E9E9E9 !default;
 
 $btn-primary-color:         $brand-primary !default;
 $btn-primary-bg:            #fff !default;
 $link-hover-decoration:     none !default;
 
 //$grid-columns:      5 !default;
-$grid-gutter-width: 20px;
+$grid-gutter-width: 40px;
 
 // code and highlights style
 $code-font-size:              80% !default;  //default == 90%
 $code-color:                $brand-support !default;
-$pre-bg:                    #E9E9E9 !default;
+//$pre-bg:                    #E9E9E9 !default;
