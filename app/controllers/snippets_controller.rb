@@ -1,5 +1,7 @@
 class SnippetsController < ApplicationController
+  before_action :authenticate_account!
   before_action :set_snippet, only: [:show, :edit, :update, :destroy]
+
 
   # GET /snippets
   # GET /snippets.json

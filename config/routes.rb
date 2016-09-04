@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :accounts
   root 'snippets#index'
   resources :snippets
 
