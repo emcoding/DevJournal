@@ -50,6 +50,8 @@ body {  padding-top: 40px;  }
 }
 
 a {
+  word-break: break-all;
+
   &:hover {
     color: $brand-primary
   }
