@@ -1,5 +1,6 @@
 class Snippet < ApplicationRecord
   validates :title, presence: true
+  belongs_to :account
 
   acts_as_taggable_on :tags # tagging gem
 
