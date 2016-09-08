@@ -4,25 +4,23 @@
 
 // Navbar
 // Move body away from nav bar
-body {  padding-top: 45px; }
+.container-fluid {  padding-top: 60px; }
 
 // Styling for snippet cards
 @mixin create-snippet-card {
   @extend .card;
-  @extend .card-inverse;
-  @extend .card-success;
+  @extend .card-outline-success;
   @extend .col-sm-12;
 
 }
 
 .snippet-card {
   @include create-snippet-card;
-  background-color: #f5f7f9;
 }
 
 // font-size within cards and all children,
 //in order to reach //  /html/body/div[1]/div[2]/div[1]/div[3]/p/text()
-// and all ul and li etc withing
+// and all ul and li etc within
 .card-columns >* {
   font-size: .9em;
 }
@@ -33,14 +31,12 @@ body {  padding-top: 45px; }
 }
 
 .card-columns #snip-title a {
-  //color: $brand-primary;
-  color: black;
+  //color: black;
   &:hover {
     color: $brand-primary;
   }
 }
 .card-footer a {
-  //color: $brand-primary;
   color: $brand-support;
 
   .grey-link {

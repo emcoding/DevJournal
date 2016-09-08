@@ -1,0 +1,36 @@
+<div id='new_form_link'>
+  <h4 class="card-title">
+    <p><%= link_to new_snippet_path, remote: true do %>
+          <div><i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i></div>
+      <% end %>
+  </h4>
+</div>
+
+<div class= 'card-columns'>
+
+  <div class = 'snippet-card'>
+    <div class="card-block" id="snip-title">
+      <h6>A developer's journal with:</h6>
+    </div>
+    <div class="card-block">
+      <ul>
+        <li>Github Flavored Markdown</li>
+        <li>Syntax Highlighting</li>
+        <li>Tags and Anchors</li>
+      </ul>
+
+      <p>Use Snippety to:
+      <ul>
+        <li>Jot down ideas for projects with @project tag</li>
+        <li>Collect gists mixed with annotating and markdown</li>
+        <li>Create checklists</li>
+        <li>Remember best practices and smart solutions</li>
+      </ul>
+      </p>
+    </div>
+  </div>
+
+<%= render template: 'devise/registrations/new.html.erb' %>
+
+
+</div>
