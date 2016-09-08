@@ -1,9 +1,9 @@
 <div>
-<%- if controller_name != 'pages' %>
+<%- if controller_name != 'sessions' %>
   <%= link_to "Log in", new_session_path(resource_name) %> |
 <% end -%>
 
-<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+<%- if devise_mapping.registerable? && controller_name != 'pages' %>
   <%= link_to "Create Account", new_registration_path(resource_name) %> |
 <% end -%>
 

@@ -8,6 +8,7 @@
 
 <div class= 'card-columns'>
 
+  <%= render template: 'devise/registrations/new.html.erb' %>
   <div class = 'snippet-card'>
     <div class="card-block" id="snip-title">
       <h6>A developer's journal with:</h6>
@@ -22,9 +23,10 @@
 
       <p>Use Snippety to:
       <ul>
-        <li>Jot down ideas for projects (coming soon: with @project tags)</li>
         <li>Collect gists, enrich with annotating and markdown</li>
         <li>Organize everything with tags</li>
+        <li>Jot down ideas for projects (coming soon: with @project tags)</li>
+        <li>Collect gists mixed with annotating and markdown</li>
         <li>Create checklists</li>
         <li>Remember best practices and smart solutions</li>
       </ul>
@@ -37,11 +39,8 @@
       <h6>Create an account to save your snippets</h6>
     </div>
     <div class="card-block">
-      Play around and create your own snippets. You need to create an account and log in to save your snippets.
+      Coming soon: Play around and create your own snippets. Only if you want to save your newly created snippets you need an account.
     </div>
   </div> <!--second card-->
-
-<%= render template: 'devise/registrations/new.html.erb' %>
-
 
 </div>
