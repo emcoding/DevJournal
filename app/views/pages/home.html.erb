@@ -17,18 +17,29 @@
         <li>Github Flavored Markdown</li>
         <li>Syntax Highlighting</li>
         <li>Tags and Anchors</li>
+        <li>Search in title and content (coming soon: and in tags)</li>
       </ul>
 
       <p>Use Snippety to:
       <ul>
-        <li>Jot down ideas for projects with @project tag</li>
-        <li>Collect gists mixed with annotating and markdown</li>
+        <li>Jot down ideas for projects (coming soon: with @project tags)</li>
+        <li>Collect gists, enrich with annotating and markdown</li>
+        <li>Organize everything with tags</li>
         <li>Create checklists</li>
         <li>Remember best practices and smart solutions</li>
       </ul>
       </p>
+    </div> <!--card block-->
+  </div> <!--card-->
+
+  <div class = 'snippet-card'>
+    <div class="card-block" id="snip-title">
+      <h6>Create an account to save your snippets</h6>
     </div>
-  </div>
+    <div class="card-block">
+      Play around and create your own snippets. You need to create an account and log in to save your snippets.
+    </div>
+  </div> <!--second card-->
 
 <%= render template: 'devise/registrations/new.html.erb' %>
 
