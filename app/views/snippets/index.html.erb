@@ -11,7 +11,7 @@
 <div class="card-columns">
   <!--snippets cards-->
   <% @snippets.each do |snippet| %>
-    <div class="card">
+    <div class="snippet-card">
       <div class="card-block" id="snip-title">
         <h6><%= link_to snippet.title.capitalize, snippet_path(snippet) %>
         </h6>

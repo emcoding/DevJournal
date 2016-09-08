@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'pages/home'
+
   devise_for :accounts
 
   root 'snippets#index'

@@ -3,6 +3,22 @@ module ApplicationHelper
   require 'rouge'
   require 'rouge/plugins/redcarpet'
 
+  # helper_method :resource_name, :resource, :devise_mapping
+
+  # for devise forms
+  def resource_name
+    :account
+  end
+
+  def resource
+    @resource ||= Account.new
+  end
+
+  def devise_mapping
+    @devise_mapping ||= Devise.mappings[:account]
+  end
+
+  #  Redcarpet markdown
   class HTML < Redcarpet::Render::HTML
     include Rouge::Plugins::Redcarpet
   end

@@ -26,7 +26,7 @@
 /config/database.yml
 
 /env
-/config/secrets.yml
+#/config/secrets.yml
 /env.yml
 
 # Ignore application configuration

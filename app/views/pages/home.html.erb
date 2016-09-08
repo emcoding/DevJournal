@@ -1,0 +1,46 @@
+<div id='new_form_link'>
+  <h4 class="card-title">
+    <p><%= link_to new_snippet_path, remote: true do %>
+          <div class="animated"><i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i></div>
+      <% end %>
+  </h4>
+</div>
+
+<div class= 'card-columns'>
+
+  <%= render template: 'devise/registrations/new.html.erb' %>
+  <div class = 'snippet-card'>
+    <div class="card-block" id="snip-title">
+      <h6>A developer's journal with:</h6>
+    </div>
+    <div class="card-block">
+      <ul>
+        <li>Github Flavored Markdown</li>
+        <li>Syntax Highlighting</li>
+        <li>Tags and Anchors</li>
+        <li>Search in title and content (coming soon: and in tags)</li>
+      </ul>
+
+      <p>Use Snippety to:
+      <ul>
+        <li>Collect gists, enrich with annotating and markdown</li>
+        <li>Organize everything with tags</li>
+        <li>Jot down ideas for projects (coming soon: with @project tags)</li>
+        <li>Collect gists mixed with annotating and markdown</li>
+        <li>Create checklists</li>
+        <li>Remember best practices and smart solutions</li>
+      </ul>
+      </p>
+    </div> <!--card block-->
+  </div> <!--card-->
+
+  <div class = 'snippet-card'>
+    <div class="card-block" id="snip-title">
+      <h6>Create an account to save your snippets</h6>
+    </div>
+    <div class="card-block">
+      Coming soon: Play around and create your own snippets. Only if you want to save your newly created snippets you need an account.
+    </div>
+  </div> <!--second card-->
+
+</div>
