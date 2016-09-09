@@ -41,6 +41,9 @@ gem 'bootstrap', '~> 4.0.0.alpha3.1'
 gem 'carrierwave'
 gem 'mini_magick' # for different versions of an image
 
+# Remote storage of uploaded files
+gem 'fog-aws'
+
 # Markdown
 gem 'redcarpet' # for markdown
 gem 'rouge'     # for syntax highlighting
