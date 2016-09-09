@@ -17,7 +17,7 @@ development:
 
 *  Install all dependencies:  
 
-`bundle install`
+`bundle install`  
 `bundle exec rake db:drop db:setup ` 
 
 
