@@ -1,0 +1,63 @@
+@import 'rouge';  //erb file link to stylesheet
+
+//Collect all global styling in this file
+//
+// global coloring
+
+$brand-primary:             #00b33c !default;
+$brand-support:             #2f4f4f; //darkslategrey
+
+$card-bg: #f7f7f9; //this works only in show view, not index view. Why?
+
+
+//bootstrap vars
+//
+// copied into _custom for overview, then copied here
+
+$enable-flex:               true !default; //Why do I need this?
+
+.container-fluid { padding-top: 60px; } // move content away from navbar
+
+//snippet-cards class
+//
+//cards
+@mixin create-snippet-card {
+  @extend .card;
+  @extend .card-outline-success;
+  //@extend .col-sm-12;
+  //when I add this ^, I got weird padding
+}
+
+.snippet-card {
+  @include create-snippet-card;
+
+}
+
+// content in cards
+// font-size within cards and all children,
+//in order to reach //  /html/body/div[1]/div[2]/div[1]/div[3]/p/text()
+// and all ul and li etc within
+.card-columns >* {
+  font-size: .8em;
+}
+
+a:not([class=h6]) {
+  word-break: break-all; //break long links, but not in snip title
+}
+
+.card-columns a {
+  color: $brand-support;
+
+  &:hover {
+    color: $brand-primary;
+    text-decoration: none;
+  }
+}
+
+// styling code in cards
+$code-font-size:              80% !default;  //70% of body; default == 90%
+$code-color:                  #90a959 !default;
+.highlight {
+  background-color: #f5f7f9;
+  font-weight: normal;
+}
