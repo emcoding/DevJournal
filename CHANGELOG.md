@@ -22,9 +22,9 @@ Heroku has read only files, so changed image storage to AWS S3
 Deployed to Heroku! YAY!
 
 ## ADDED
-Homepage with sign-up form
-Account links to navbar
-Devise authentication: database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
+- Homepage with sign-up form
+- Account links to navbar
+- Devise authentication: database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 Syntax highlighting
 Markdown
 JS scripts for anchors in snippet titles
