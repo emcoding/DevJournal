@@ -20,6 +20,7 @@
 
 # First deploy 2016-09-06
 - Deployed to Heroku! YAY!
+- Had to migrate from sqlite to postgresql
 
 ## ADDED
 - Homepage with sign-up form
