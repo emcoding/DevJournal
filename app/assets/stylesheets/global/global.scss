@@ -30,9 +30,21 @@ $enable-flex:               true !default; //Why do I need this?
   //when I add this ^, I got weird padding
 }
 
+.snippet-card h6 a {
+  word-break: normal;
+}
 .snippet-card {
   @include create-snippet-card;
 
+  a {
+    color: $brand-support;
+    word-break: break-all;
+
+    &:hover {
+      color: $brand-primary;
+      text-decoration: none;
+    }
+  }
 }
 
 .plus_card {
@@ -51,18 +63,7 @@ $enable-flex:               true !default; //Why do I need this?
   font-size: .8em;
 }
 
-a:not([class=h6]) {
-  word-break: break-all; //break long links, but not in snip title
-}
 
-.card-columns .snippet-card a {
-  color: $brand-support;
-
-  &:hover {
-    color: $brand-primary;
-    text-decoration: none;
-  }
-}
 
 // styling code in cards
 $code-font-size:              80% !default;  //70% of body; default == 90%
