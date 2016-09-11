@@ -36,12 +36,8 @@
       <small><%= f.label :remove_image %></small>
       <%= f.check_box :remove_image, class: 'checkbox inline' %>
       <div class="card-block">
-        <%= f.button :submit, class: "btn btn-primary btn-inverse" do %>
-            <i class='fa fa-plus-circle fa-4x'></i>
-        <% end %>
-        <%= link_to snippets_path, class: "btn btn-primary btn-inverse" do%>
-            <i class="fa fa-chevron-circle-left fa-4x" aria-hidden="true"></i>
-        <% end %>
+        <%= f.submit 'Save', class: "btn btn-primary btn-inverse" %>
+        <%= link_to 'Go back without saving', snippets_path %>
       </div>
     </div>
   </div>
