@@ -1,16 +1,18 @@
-<!--TEMP moved to app.html.erb because Devise is angry-->
+
 <nav class="navbar navbar-fixed-top bg-faded">
+
   <a class="navbar-brand" href="/">Snippety</a>
-  <ul class="nav-inline">
-    <li class="nav-item pull-xs-right">
-      <% if account_signed_in? %>
-          <%= current_account.email %>
-          <%= link_to 'Edit profile', edit_account_registration_path, :class => 'navbar-link' %> |
-          <%= link_to "Logout", destroy_account_session_path, method: :delete, :class => 'navbar-link'  %>
-      <% else %>
-          <%= link_to "Sign up", new_account_registration_path, :class => 'navbar-link'  %> |
-          <%= link_to "Login", new_account_session_path, :class => 'navbar-link'  %>
-      <% end %>
+  <ul class="nav navbar-nav">
+      <li class="nav-item pull-xs-right">
+        <% if account_signed_in? %>
+            <%= current_account.email %>
+            <%= link_to 'Edit profile', edit_account_registration_path, :class => 'navbar-link' %> |
+            <%= link_to "Logout", destroy_account_session_path, method: :delete, :class => 'navbar-link'  %>
+        <% else %>
+            <%= link_to "Sign up", new_account_registration_path, :class => 'navbar-link'  %> |
+            <%= link_to "Login", new_account_session_path, :class => 'navbar-link'  %>
+        <% end %>
+      </li>
   </ul>
-  <div class="nav_item pull-xs-left"><%= render 'snippets/search' %></div>
+  <div class="nav-item pull-xs-left"><%= render 'snippets/search' %></div>
 </nav>
