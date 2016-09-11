@@ -16,7 +16,9 @@ $card-bg: #f7f7f9; //this works only in show view, not index view. Why?
 
 $enable-flex:               true !default; //Why do I need this?
 
-.container-fluid { padding-top: 60px; } // move content away from navbar
+.container-fluid {
+  padding-top: 60px;
+} // move content away from navbar
 
 //snippet-cards class
 //
@@ -33,6 +35,14 @@ $enable-flex:               true !default; //Why do I need this?
 
 }
 
+.plus_card {
+  @extend .card;
+
+  .fa a {
+    color: $brand-primary;
+  }
+}
+
 // content in cards
 // font-size within cards and all children,
 //in order to reach //  /html/body/div[1]/div[2]/div[1]/div[3]/p/text()
@@ -45,7 +55,7 @@ a:not([class=h6]) {
   word-break: break-all; //break long links, but not in snip title
 }
 
-.card-columns a {
+.card-columns .snippet-card a {
   color: $brand-support;
 
   &:hover {
