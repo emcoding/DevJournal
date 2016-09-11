@@ -25,7 +25,8 @@
 ## ADDED
 - Homepage with sign-up form
 - Account links added to navbar
-- Devise authentication: database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
+- Add associations between Account and Snippets 
+- Devise Account model with authentication: database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 - Syntax highlighting
 - Markdown for snippets content 
 - JS scripts for anchors in snippet titles
