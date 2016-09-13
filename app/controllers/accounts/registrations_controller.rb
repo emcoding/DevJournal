@@ -11,9 +11,9 @@ class Accounts::RegistrationsController < Devise::RegistrationsController
   def create #copied from super
     resource = [sign_up_params] ? Account.new(sign_up_params) : Account.new_guest
     # build_resource(sign_up_params)
-
+byebug
     resource.save
-    # yield resource if block_given?
+    yield resource if block_given?
     # if resource.persisted?
     #   if resource.active_for_authentication?
     #     set_flash_message! :notice, :signed_up
@@ -29,7 +29,7 @@ class Accounts::RegistrationsController < Devise::RegistrationsController
     #   set_minimum_password_length
     #   respond_with resource
     # end
-     redirect_to new_snippet_path #TODO doesn't go to form within card => != real UX
+     redirect_to root_path
   end
 
   # GET /resource/edit
