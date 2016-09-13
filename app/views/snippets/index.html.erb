@@ -1,15 +1,19 @@
 <p id="notice"><%#= notice %></p>
-<div class="card-columns">
+<div class="card-columns"><!--<div class="card-columns">-->
   <div class="plus-card">
-  <div id='new_form_link'>
-      <h4 class="card-title">
-        <p><%= link_to new_snippet_path, remote: true do %>
-            <i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
-            <% end %></p>
-      </h4>
+    <div id='new_form_link'>
+        <h4 class="card-title">
+          <p><%= link_to new_snippet_path, remote: true do %>
+              <i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
+              <% end %></p>
+        </h4>
+    </div>
   </div>
-  </div>
-<!--<div class="card-columns">-->
+
+  <% if current_account.nil? %>
+      <% end %>
+
+
   <!--snippets cards-->
   <% @snippets.each do |snippet| %>
     <div class="snippet-card">

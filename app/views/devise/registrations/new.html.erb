@@ -1,8 +1,9 @@
-<div class = 'snippet-card'>
- <div class="card-block" id="snip-title">
-   <h6>Create an account</h6>
- </div>
 
+ <div class="card-block" id="snip-title">
+   <h6>Want to save your snippets?</h6>
+ </div>
+ <div class="card-block">
+   <strong>Create an account</strong>
   <div class="form-group">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -35,4 +36,5 @@
 
 <%= render "devise/shared/links" %>
 
-</div>
+ </div> <!--card-block-->
+

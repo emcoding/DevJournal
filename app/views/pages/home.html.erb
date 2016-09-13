@@ -1,14 +1,27 @@
-<div id='new_form_link'>
-  <h4 class="card-title">
-    <p><%= link_to new_snippet_path, remote: true do %>
-          <div class="animated"><i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i></div>
-      <% end %>
-  </h4>
-</div>
+<div class= 'card-columns'><!--<div class="card-columns">-->
+  <div class="plus-card">
+    <div id='new_form_link'>
+      <h4 class="card-title">
+        <p><%= link_to new_snippet_path, remote: true do %>
+              <i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
+          <% end %></p>
+      </h4>
+    </div>
+  </div>
 
-<div class= 'card-columns'>
+  <div class = 'snippet-card'>
 
+    <div class="card-block" id="snip-title">
+      <h6>Try it out! Click the plus sign to add a snippet
+        </h6>
+  </div>
+    </div>
+
+  <div class = 'snippet-card'>
   <%= render template: 'devise/registrations/new.html.erb' %>
+    </div>
+
+
   <div class = 'snippet-card'>
     <div class="card-block" id="snip-title">
       <h6>A developer's journal with:</h6>
