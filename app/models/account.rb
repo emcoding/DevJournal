@@ -5,4 +5,7 @@ class Account < ApplicationRecord
 
   has_many :snippets
 
+  def self.new_guest
+    new { |a| a.guest = true }
+  end
 end

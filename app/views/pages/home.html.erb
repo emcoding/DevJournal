@@ -2,7 +2,8 @@
   <div class="plus-card">
     <div id='new_form_link'>
       <h4 class="card-title">
-        <p><%= link_to new_snippet_path, remote: true do %>
+        <!--link to accounts/registrations#create-->
+        <p><%= link_to account_registration_path, method: :post, remote: true do %>
               <i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
           <% end %></p>
       </h4>
