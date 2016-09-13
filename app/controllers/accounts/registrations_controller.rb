@@ -13,6 +13,7 @@ class Accounts::RegistrationsController < Devise::RegistrationsController
     # build_resource(sign_up_params)
 byebug
     resource.save
+    session[:account_id] = resource.id
     yield resource if block_given?
     # if resource.persisted?
     #   if resource.active_for_authentication?
