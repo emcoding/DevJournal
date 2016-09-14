@@ -4,15 +4,15 @@ class Ability
   def initialize(account)
     account ||= Account.new
 
-    if account.has_role? :admin
+    if account.role == 'admin'
       can :manage, :all
-    elsif account.has_role? :snipper
-      can :create, Snippet # author can create status
-      can :update, Snippet # author can update status
-      can :destroy, Snippet # author can destroy status
+    elsif account.role == 'snipper'
+      can :create, Snippet
+      can :update, Snippet
+      can :destroy, Snippet
       can :read, :all
-    else
-      can :read, :all
+    # elsif account.role == 'guest' # guest role not yet implemented
+    #   can :read, Snippet
     end
 
     # Define abilities for the passed in user here. For example:
