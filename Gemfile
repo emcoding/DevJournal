@@ -51,8 +51,9 @@ gem 'rouge'     # for syntax highlighting
 # Tags
 gem 'acts-as-taggable-on', :git => 'https://github.com/mbleigh/acts-as-taggable-on'
 
-# Log in and authenticate
-gem 'devise'
+# Accounts
+gem 'devise'                # registration and log in procedures
+gem 'cancancan', '~> 1.10'  #  roles and access control
 
 ##################
 
