@@ -5,6 +5,21 @@ class Account < ApplicationRecord
 
   has_many :snippets
 
-  ROLES = [:admin, :snipper, :guest]  # see cancancan wiki if more complex role system is needed
+  ROLES = %i[admin snipper guest]
 
+  #Roles bitmask ; see cancancan wiki
+  def roles=(roles)
+    roles = [*roles].map { |r| r.to_sym }
+    self.roles_mask = (roles & ROLES).map { |r| 2**ROLES.index(r) }.inject(0, :+)
+  end
+
+  def roles
+    ROLES.reject do |r|
+      ((roles_mask.to_i || 0) & 2**ROLES.index(r)).zero?
+    end
+  end
+
+  def has_role?(role)
+    roles.include?(role)
+  end
 end

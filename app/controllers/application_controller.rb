@@ -1,9 +1,20 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  alias_method :current_user, :current_account
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
-  # # override cancancan method, where it expects a current_user method or ^ alias method if that is sufficient
-  # def current_ability
-  #   @current_ability ||= AccountAbility.new(current_account)
-  # end
+  #alias_method :current_user, :current_account
+## I dont want that, then I need to use current_user
+
+  # override cancancan method, where it expects a current_user method or ^ alias method if that is sufficient
+  def current_ability
+    @current_ability ||= Ability.new(current_account)
+  end
+
+
+  protected
+  #I think I don't need this, because I set roles programmatically
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit( :email, :password, :password_confirmation, roles: []) }
+  end
+
 end
