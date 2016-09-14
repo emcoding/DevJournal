@@ -4,15 +4,12 @@ class Ability
   def initialize(account)
     account ||= Account.new
 
+    alias_action :create, :read, :update, :destroy, :to => :crud
+
     if account.role == 'admin'
       can :manage, :all
     elsif account.role == 'snipper'
-      can :create, Snippet
-      can :update, Snippet
-      can :destroy, Snippet
-      can :read, :all
-    # elsif account.role == 'guest' # guest role not yet implemented
-    #   can :read, Snippet
+      can :crud, Snippet, account_id: account.id
     end
 
     # Define abilities for the passed in user here. For example:
