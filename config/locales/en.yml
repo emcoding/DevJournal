@@ -21,3 +21,10 @@
 
 en:
   hello: "Hello world"
+
+  unauthorized:
+    manage:
+      all: "You don't have access to that %{subject}."
+      account: "You don't have access to other peoples %{subject}."
+    update:
+      snippet: "You were redirected to this page because you can't change the snippet you tried to update ."
