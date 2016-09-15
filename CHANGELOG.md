@@ -1,4 +1,5 @@
-
+## CHANGED
+- Added Cancancan for authorisation; now people can only see and manage their own snippets 2016-09-14 
 
 # Pushed 2016-09-11 v22
 ## CHANGED
