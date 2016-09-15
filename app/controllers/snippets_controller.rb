@@ -1,8 +1,6 @@
 class SnippetsController < ApplicationController
-  before_action :authenticate_account!
-  before_action :set_snippet, only: [:show, :edit, :update, :destroy]
-
-  load_and_authorize_resource
+  before_action :authenticate_account! # Devise
+  load_and_authorize_resource # Cancancan
 
   # GET /snippets
   # GET /snippets.json
@@ -23,7 +21,7 @@ class SnippetsController < ApplicationController
 
   # GET /snippets/new
   def new
-    @snippet = Snippet.new
+    # @snippet = Snippet.new
   end
 
   # GET /snippets/1/edit
@@ -33,9 +31,6 @@ class SnippetsController < ApplicationController
   # POST /snippets
   # POST /snippets.json
   def create
-    # @snippet = Snippet.new(snippet_params)
-    @snippet = current_account.snippets.build(snippet_params)
-
     respond_to do |format|
       if @snippet.save
         format.html { redirect_to snippets_path }
@@ -64,7 +59,6 @@ class SnippetsController < ApplicationController
   # DELETE /snippets/1
   # DELETE /snippets/1.json
   def destroy
-    @snippet.destroy
     respond_to do |format|
       format.html { redirect_to snippets_url }
       format.json { head :no_content }
@@ -72,11 +66,6 @@ class SnippetsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_snippet
-      @snippet = Snippet.find(params[:id])
-    end
-
     # Never trust parameters from the scary internet, only allow the white list through.
     def snippet_params
       params.require(:snippet).permit(:title, :content, :tag_list, :image, :remove_image)

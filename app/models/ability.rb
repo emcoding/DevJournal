@@ -6,13 +6,11 @@ class Ability
 
     alias_action :create, :read, :update, :destroy, :to => :crud
 
-    if account.role == 'snipper'
-      can :crud, Snippet do |snip|
-        snip.try(:account) == account
-      end
-      cannot :crud, Account
+    if account.role == 'admin'
+      can :manage, :all
+    elsif account.role == 'snipper'
+      can :crud, Snippet, account_id: account.id
     end
-
 
     # Define abilities for the passed in user here. For example:
     #

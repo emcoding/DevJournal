@@ -5,6 +5,4 @@ class Account < ApplicationRecord
 
   has_many :snippets
 
-  ROLES = [:admin, :snipper, :guest]  # see cancancan wiki if more complex role system is needed
-
 end
