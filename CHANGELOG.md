@@ -1,6 +1,9 @@
 ## CHANGED
 - Added Cancancan for authorisation; now people can only see and manage their own snippets 2016-09-14 
 
+## FIXED
+- Fix: Search is case insensitive again (after migration from SQLite to PG)
+
 # Pushed 2016-09-11 v22
 ## CHANGED
 - Restructure css; now homepage and snippets page use same css
