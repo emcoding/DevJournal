@@ -14,4 +14,19 @@ class ApplicationController < ActionController::Base
     @current_ability ||= Ability.new(current_account)
   end
 
+  # override Devise to allow for 'soft sign-up'
+  def authenticat_account!
+    current_account.present?
+  end
+
+  def current_account
+    super || Account.where(soft_token: soft_token).first_or_initialize
+  end
+
+  private
+
+  def soft_token
+    session[:account_token] ||= SecureRandom.hex(8)
+  end
+
 end
