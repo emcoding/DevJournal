@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'snippets#index'
   get 'home', to: 'pages#home'
 
-  devise_for :accounts, controllers: {registrations: 'accounts/registrations'}
+  devise_for :accounts
 
   resources :snippets
 
