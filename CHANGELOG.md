@@ -1,4 +1,5 @@
 ## CHANGED
+- Fix: plus sign card placement and got better card styling of its own 
 - Added Cancancan for authorisation; now people can only see and manage their own snippets 2016-09-14 
 
 ## FIXED
