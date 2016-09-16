@@ -1,4 +1,14 @@
 ## CHANGED
+
+- First try on better styling log in form.
+- Add css class dialog-card
+
+## FIXED
+- added missing method :destroy after introducing CANCANCAN's :load_and_authorize_resource!
+- remove leftover route to non-existent devise controller (causing error : too many redirects)
+
+# Pushed 2016-09-14 v23 >> HEROKU NOT SHOWING SITE chrome says: too many redirects (after showing log in form in nn browser) )
+## CHANGED
 - Added Cancancan for authorisation; now people can only see and manage their own snippets 2016-09-14 
 
 ## FIXED
