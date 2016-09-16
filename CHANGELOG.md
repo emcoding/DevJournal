@@ -1,6 +1,9 @@
 
 ### Changed 
-
+- Allow guest to play around with snippet features
+- Toggle navbar links for guest or logged in account
+- Fix layout on homepage and signup form
+- Some text editing and extra cards to reflect the current state of Snippety
 
 ## Pushed 2016-09-14 v 25
 ### CHANGED
