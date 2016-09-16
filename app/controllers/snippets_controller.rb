@@ -1,6 +1,6 @@
 class SnippetsController < ApplicationController
   before_action :authenticate_account! # Devise
-  load_and_authorize_resource except: :create # Cancancan
+  load_and_authorize_resource # Cancancan
 
   # GET /snippets
   # GET /snippets.json
@@ -41,15 +41,11 @@ class SnippetsController < ApplicationController
     @account = current_account
     @snippet = @account.snippets.build(snippet_params)
 
-    byebug
-
     if @account.soft_account?
       @snippet.soft_token = @account.soft_token
     end
-
     @snippet.save
-    #authorize! :create, @snippet # TODO this doesn't work yet
-byebug
+
     respond_to do |format|
       if @snippet.save
         format.html { redirect_to snippets_path }
