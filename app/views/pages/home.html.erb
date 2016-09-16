@@ -12,14 +12,15 @@
   <div class = 'snippet-card'>
 
     <div class="card-block" id="snip-title">
-      <h6>Try it out! Click the plus sign to add a snippet
+      <h6>Try it out! Click the plus sign to create your first snippet :-)
         </h6>
+      <div>This will take you to a new page</div>
   </div>
     </div>
 
   <div class = 'snippet-card'>
-  <%= render template: 'devise/registrations/new.html.erb' %>
-    </div>
+    <%= render template: 'devise/registrations/new.html.erb' %>
+  </div>
 
 
   <div class = 'snippet-card'>
@@ -31,17 +32,17 @@
         <li>Github Flavored Markdown</li>
         <li>Syntax Highlighting</li>
         <li>Tags and Anchors</li>
-        <li>Search in title and content (coming soon: and in tags)</li>
+        <li>Smart Search in title and content (coming soon: and in tags)</li>
       </ul>
 
       <p>Use Snippety to:
       <ul>
-        <li>Collect gists, enrich with annotating and markdown</li>
+        <li>Collect code snippets the way you like: with pretty syntax highlighting, annotations and a screenshot</li>
         <li>Organize everything with tags</li>
-        <li>Jot down ideas for projects (coming soon: with @project tags)</li>
-        <li>Collect gists mixed with annotating and markdown</li>
-        <li>Create checklists</li>
-        <li>Remember best practices and smart solutions</li>
+        <li>Jot down ideas for tech talks, blogposts and presentations</li>
+        <li>Collect thoughts and remarks on the projects you are working on (coming soon: with @project tags) </li>
+        <li>Never worry again where you put those smart solutions and best practices.</li>
+        <li>Keep a journal about your professional development and lessons learned</li>
       </ul>
       </p>
     </div> <!--card block-->
@@ -52,8 +53,25 @@
       <h6>Create an account to save your snippets</h6>
     </div>
     <div class="card-block">
-      Coming soon: Play around and create your own snippets. Only if you want to save your newly created snippets you need an account.
+      Coming soon: Just because you are playing around now, doesn't mean you have to lose your snippets on sign up. Ah, to be honest: you will lose them now. But I am working on that!
     </div>
   </div> <!--second card-->
+
+  <div class="snippet-card">
+    <div class="card-block" id="snip-title">
+      <h6>About Snippety</h6>
+    </div>
+    <div class="card-block">
+      Snippety started when I was looking for a pet project while learning Ruby on Rails. The first thing I needed was a nice tool to collect my lessons learned and document my learning goals. I couldn't find what I need, so.....  Here is Snippety - alpha.
+    </div>
+  </div>
+
+  <div class="snippet-card">
+    <div class="card-block" id="snip-title">
+      <h6>Alpha version: beware!</h6>
+    </div>
+    <div class="card-block">Snippety is still a pet project, albeit one with ambition. The data you post is not encrypted yet and the images are hosted on a public S3 bucket. Be aware that Snippety is not yet suitable for sensitive information.</div>
+
+  </div>
 
 </div>
