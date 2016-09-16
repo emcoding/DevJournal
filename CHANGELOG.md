@@ -1,9 +1,9 @@
 ## CHANGED
-- Fix: plus sign card placement and got better card styling of its own 
 - Added Cancancan for authorisation; now people can only see and manage their own snippets 2016-09-14 
 
 ## FIXED
 - Fix: Search is case insensitive again (after migration from SQLite to PG)
+- Fix: plus sign card placement and got better card styling of its own #46 
 
 # Pushed 2016-09-11 v22
 ## CHANGED
