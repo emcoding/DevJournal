@@ -7,22 +7,18 @@ class SnippetsController < ApplicationController
   def index
 
     @account = current_account
-    byebug
+
     if @account.soft_account?
-      byebug
       @snippets = Snippet.where(soft_token: @account.soft_token).reverse_order
-      byebug
     else
       @snippets = current_account.snippets.reverse_order
     end
-    # TODO find out how to do this:
-    #   if params[:search]
-    #     @snippets = current_account.snippets.search(params[:search]).reverse_order
-    #   elsif params[:tag]
-    #     @snippets = current_account.snippets.tagged_with(params[:tag]).reverse_order
-    #   else
-    #     #@snippets = current_account.snippets.reverse_order
-    #   end
+
+    if params[:search]
+      @snippets = @snippets.search(params[:search]).reverse_order
+    elsif params[:tag]
+      @snippets = @snippets.tagged_with(params[:tag]).reverse_order
+    end
   end
 
   # GET /snippets/1
