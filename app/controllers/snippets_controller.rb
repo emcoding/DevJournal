@@ -5,13 +5,20 @@ class SnippetsController < ApplicationController
   # GET /snippets
   # GET /snippets.json
   def index
-      if params[:search]
-        @snippets = current_account.snippets.search(params[:search]).reverse_order
-      elsif params[:tag]
-        @snippets = current_account.snippets.tagged_with(params[:tag]).reverse_order
-      else
-        @snippets = current_account.snippets.reverse_order
-      end
+
+    @account = current_account
+
+    if @account.soft_account?
+      @snippets = Snippet.where(soft_token: @account.soft_token).reverse_order
+    else
+      @snippets = current_account.snippets.reverse_order
+    end
+
+    if params[:search]
+      @snippets = @snippets.search(params[:search]).reverse_order
+    elsif params[:tag]
+      @snippets = @snippets.tagged_with(params[:tag]).reverse_order
+    end
   end
 
   # GET /snippets/1
@@ -31,6 +38,14 @@ class SnippetsController < ApplicationController
   # POST /snippets
   # POST /snippets.json
   def create
+    @account = current_account
+    @snippet = @account.snippets.build(snippet_params)
+
+    if @account.soft_account?
+      @snippet.soft_token = @account.soft_token
+    end
+    @snippet.save
+
     respond_to do |format|
       if @snippet.save
         format.html { redirect_to snippets_path }

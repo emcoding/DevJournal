@@ -1,10 +1,10 @@
 
- <div class="dialog-card card-block" id="snip-title">
+  <div class="card-block" id="snip-title">
    <h6>Want to save your snippets?</h6>
- </div>
- <div class="card-block">
    <strong>Create an account</strong>
-  <div class="form-group">
+   </div>
+
+  <div class="card-block form-group">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
@@ -27,14 +27,13 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Create my account" %>
+    <%= f.submit "Create my account", class: 'btn btn-success' %>
   </div>
 <% end %>
 
-</div>
+
 <!--form group-->
 
 <%= render "devise/shared/links" %>
 
  </div> <!--card-block-->
-
