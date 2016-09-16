@@ -8,7 +8,7 @@ $brand-primary:             #00b33c !default;
 $brand-support:             #2f4f4f; //darkslategrey
 
 //$card-bg: #f7f7f9; //this works only in show view, not index view. Why?
-$card-border-color:        rgba(0,0,0,.125);
+$card-border-color:        rgba(0,0,0,0) !default;
 
 //bootstrap vars
 //
@@ -50,6 +50,7 @@ $enable-flex:               true !default; //Why do I need this?
 
 .plus-card {
   @extend .card;
+  text-align: center;
 
   .fa a {
     color: $brand-primary;
