@@ -13,6 +13,7 @@
 
 ## Pushed 2016-09-14 v23 
 >> HEROKU NOT SHOWING SITE chrome says: too many redirects (NB Solved by going into Heroku rails c and add role to my account) )
+
 ### CHANGED
 - Added Cancancan for authorisation; now people can only see and manage their own snippets 2016-09-14 
 
