@@ -48,6 +48,11 @@ $enable-flex:               true !default; //Why do I need this?
   }
 }
 
+.dialog-card {
+  @extend .snippet-card;
+  @extend .col-xs-12;
+  @extend .col-sm-4;
+}
 .plus-card {
   @extend .card;
   text-align: center;
@@ -56,6 +61,7 @@ $enable-flex:               true !default; //Why do I need this?
     color: $brand-primary;
   }
 }
+
 
 // content in cards
 // font-size within cards and all children,

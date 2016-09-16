@@ -59,6 +59,8 @@ class SnippetsController < ApplicationController
   # DELETE /snippets/1
   # DELETE /snippets/1.json
   def destroy
+    @snippet.destroy
+
     respond_to do |format|
       format.html { redirect_to snippets_url }
       format.json { head :no_content }
