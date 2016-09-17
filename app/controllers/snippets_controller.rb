@@ -1,6 +1,6 @@
 class SnippetsController < ApplicationController
   before_action :authenticate_account! # Devise
-  load_and_authorize_resource # Cancancan
+  load_and_authorize_resource except: :index # Cancancan
 
   # GET /snippets
   # GET /snippets.json
@@ -28,7 +28,6 @@ class SnippetsController < ApplicationController
 
   # GET /snippets/new
   def new
-    # @snippet = Snippet.new
   end
 
   # GET /snippets/1/edit

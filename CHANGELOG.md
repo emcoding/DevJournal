@@ -1,5 +1,17 @@
 
 ### Changed 
+- Removed cancancan loading and auth from :index, because :index already has a user/guest-check.
+
+### Added
+- Add soft_token to Devise's permitted parameters (prep for migration guest snippets)
+- Add logic to preserve guest snippets when they create an account :-)
+
+## Solved 
+- Heroku problem solved with restart (maybe or maybe not after clearing sessions and / or cache
+
+## Pushed 2016-09-16 
+>> Heroku not showing site with root_path, not allowing guest to save snippet
+### Changed 
 - Allow guest to play around with snippet features
 - Toggle navbar links for guest or logged in account
 - Fix layout on homepage and signup form

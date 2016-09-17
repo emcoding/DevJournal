@@ -26,6 +26,8 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <%= f.hidden_field :soft_token, value: current_account.soft_token %>
+
   <div class="actions">
     <%= f.submit "Create my account", class: 'btn btn-success' %>
   </div>
