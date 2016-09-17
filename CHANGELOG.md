@@ -1,4 +1,8 @@
+## Changed
+- Update rescue from Cancancan with head :forbidden (since Rails4 instead of render :nothing)
 
+## Pushed 2016-09-17
+no problems with heroku!
 ### Changed 
 - Removed cancancan loading and auth from :index, because :index already has a user/guest-check.
 
