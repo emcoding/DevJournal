@@ -1,7 +1,10 @@
 
 ### Changed 
-- Removed cancancan loading and auth from :index, because it already has a user/guest-check.
+- Removed cancancan loading and auth from :index, because :index already has a user/guest-check.
+
+### Added
 - Add soft_token to Devise's permitted parameters (prep for migration guest snippets)
+- Add logic to preserve guest snippets when they create an account :-)
 
 ## Solved 
 - Heroku problem solved with restart (maybe or maybe not after clearing sessions and / or cache

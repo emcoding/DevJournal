@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  before_action :configure_permitted_parameters, if: :devise_controller?
 
   rescue_from CanCan::AccessDenied do |exception|
     respond_to do |format|
@@ -22,14 +21,6 @@ class ApplicationController < ActionController::Base
 
   def current_account
     super || Account.where(soft_token: soft_token).first_or_initialize
-  end
-
-  protected
-
-  # lazy way of permitting additional params for Devise (see Devise readme)
-  # instead of creating a separate registrations_controller
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:soft_token])
   end
 
   private
