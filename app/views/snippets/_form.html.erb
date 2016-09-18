@@ -26,6 +26,7 @@
           <i class ='fa fa-tag'></i>
         </div>
         <%= f.text_field :tag_list, placeholder: 'tag1, tag2, one tag, ', value: @snippet.tag_list.to_s%>
+        <%= f.text_field :project_list, value: @snippet.project_list.to_s %>
       </div>
 
         <%= f.label :content, class: 'sr-only' %>
