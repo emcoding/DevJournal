@@ -1,3 +1,6 @@
+## Fixed
+- Account was not accessible, Devise throwing an error. Fixed in :authenticate_user! 
+
 ## Changed
 - Update rescue from Cancancan with head :forbidden (since Rails4 instead of render :nothing)
 
