@@ -15,8 +15,8 @@ class ApplicationController < ActionController::Base
   end
 
   # override Devise to allow for 'soft sign-up'
-  def authenticate_account!
-    current_account.present?
+  def authenticate_account!(*args)
+    current_account.present? || super(*args)
   end
 
   def current_account
