@@ -7,7 +7,8 @@ class Snippet < ApplicationRecord
   mount_uploader :image, ImageUploader # carrierwave gem
 
   def self.search(search)
-    where("title ILIKE ? OR content ILIKE ?", "%#{search}%", "%#{search}%")
+    q_words = Snippet.where("title ILIKE ? OR content ILIKE ?", "%#{search}%", "%#{search}%")
+    q_tags = Snippet.tagged_with("#{search}")
+    q_words + q_tags
   end
-
 end
