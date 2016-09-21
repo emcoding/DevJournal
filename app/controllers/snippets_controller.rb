@@ -15,9 +15,11 @@ class SnippetsController < ApplicationController
     end
 
     if params[:search]
-      @snippets = @snippets.search(params[:search]).reverse_order
+      @snippets = @snippets.search(params[:search]).reverse
     elsif params[:tag]
       @snippets = @snippets.tagged_with(params[:tag]).reverse_order
+    elsif params[:project]
+      @snippets = @snippets.tagged_with(params[:project])
     end
   end
 
@@ -84,6 +86,6 @@ class SnippetsController < ApplicationController
   private
     # Never trust parameters from the scary internet, only allow the white list through.
     def snippet_params
-      params.require(:snippet).permit(:title, :content, :tag_list, :image, :remove_image)
+      params.require(:snippet).permit(:title, :content, :tag_list, :project_list, :image, :remove_image)
     end
 end

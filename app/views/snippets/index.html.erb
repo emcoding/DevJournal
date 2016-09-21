@@ -27,9 +27,10 @@
       </div>
       <div class="card-footer text-muted">
 
-        <i class ='fa fa-tag'></i> <%= raw snippet.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %> <%= link_to snippet, method: :delete, data: { confirm: 'Are you sure?' }, remote: true do %>
+        <i class ='fa fa-tag'></i> <%= raw snippet.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %>  | <%= raw snippet.project_list.map { |project| link_to project, tag_path(project) }.join(', ') %>   |  <%= link_to snippet, method: :delete, data: { confirm: 'Are you sure?' }, remote: true do %>
             <i class="fa fa-trash-o pull-right grey-link" style='position: relative; top: 5px' aria-hidden="true"></i>
         <% end %>
+        <%#= snippet.project_list.map %>
       </div>
     </div><!-- /.card -->
   <% end %><!-- end of snippets -->
