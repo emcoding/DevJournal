@@ -1,3 +1,6 @@
+## Added
+- Add project tags to snippet.
+
 ## Fixed
 - Account was not accessible, Devise throwing an error. Fixed in :authenticate_user! 
 
