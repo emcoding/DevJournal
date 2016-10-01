@@ -2,6 +2,10 @@ class SnippetsController < ApplicationController
   before_action :authenticate_account! # Devise
   load_and_authorize_resource except: :index # Cancancan
 
+  rescue_from ActionController::InvalidAuthenticityToken do |exception|
+    redirect_to new_snippet_url, notice: "Oops, that went down the drain, try again, please."
+  end
+
   # GET /snippets
   # GET /snippets.json
   def index
