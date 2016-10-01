@@ -32,7 +32,6 @@
         <%= f.text_area :content, rows: 15, class: 'form-control' %>
       <small class="form-text">Add an image</small>
       <%= f.file_field :image, class: 'form-control', id: 'new_image' %>
-      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
       <small><%= f.label :remove_image %></small>
       <%= f.check_box :remove_image, class: 'checkbox inline' %>
       <div class="card-block">
