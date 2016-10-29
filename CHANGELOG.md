@@ -1,10 +1,14 @@
-## Added
-- Add project tags to snippet.
 
-## Fixed
+## Pushed 2016-09-21
+### Added
+- Add project tags to snippet. see #15
+- Added and disables search in tags, besides title and content. Under investigation. 
+
+### Fixed
 - Account was not accessible, Devise throwing an error. Fixed in :authenticate_user! 
+- Show relevant button : create or save changes in form partial
 
-## Changed
+### Changed
 - Update rescue from Cancancan with head :forbidden (since Rails4 instead of render :nothing)
 
 ## Pushed 2016-09-17
@@ -14,7 +18,7 @@ no problems with heroku!
 
 ### Added
 - Add soft_token to Devise's permitted parameters (prep for migration guest snippets)
-- Add logic to preserve guest snippets when they create an account :-)
+- **Add logic to preserve guest snippets when they create an account :-)**
 
 ## Solved 
 - Heroku problem solved with restart (maybe or maybe not after clearing sessions and / or cache
