@@ -9,12 +9,11 @@ $(document).on('turbolinks:load', function() {
 
     //click within card area to edit snippet
     $('.snippet-card').on('click', function(event) {
-        if ( !$(event.target).is('#snippet_content'|| 'input') ) {
+        if ( !$(event.target).closest('form').length ) {
 
             window.location = this.getAttribute("data-snippet-url");
         }
     });
-
 });
 
 
