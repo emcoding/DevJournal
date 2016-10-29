@@ -55,13 +55,18 @@ $enable-flex:               true !default; //Why do I need this?
 }
 .plus-card {
   @extend .card;
-  @extend .card-outline-success;
   text-align: center;
 
   .fa a {
     color: $brand-primary;
   }
 }
+
+.plus-card-home {
+  @extend .plus-card;
+  @extend .card-outline-success;
+}
+
 
 
 // content in cards
