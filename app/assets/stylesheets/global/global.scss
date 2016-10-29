@@ -55,6 +55,7 @@ $enable-flex:               true !default; //Why do I need this?
 }
 .plus-card {
   @extend .card;
+  @extend .card-outline-success;
   text-align: center;
 
   .fa a {
