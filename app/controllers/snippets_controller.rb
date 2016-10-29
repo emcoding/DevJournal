@@ -19,7 +19,7 @@ class SnippetsController < ApplicationController
     end
 
     if params[:search]
-      @snippets = @snippets.search(params[:search]).reverse
+      @snippets = @snippets.search(params[:search])
     elsif params[:tag]
       @snippets = @snippets.tagged_with(params[:tag]).reverse_order
     elsif params[:project]

@@ -9,8 +9,8 @@ class Snippet < ApplicationRecord
 
   def self.search(search)
     q_words = Snippet.where("title ILIKE ? OR content ILIKE ?", "%#{search}%", "%#{search}%")
-    # q_tags = Snippet.tagged_with(tag: "#{search}")
-    # q_words + q_tags
+    q_tags = Snippet.tagged_with(search)  # => both tags and project-tags
+    q_words + q_tags
   end
 
 end
