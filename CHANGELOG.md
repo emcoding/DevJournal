@@ -1,3 +1,5 @@
+### Changed
+Restored search in tags - although still under investigation PR #61
 
 ## Pushed 2016-09-21
 ### Added
