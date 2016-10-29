@@ -15,7 +15,7 @@ class SnippetsController < ApplicationController
     if @account.soft_account?
       @snippets = Snippet.where(soft_token: @account.soft_token).reverse_order
     else
-      @snippets = current_account.snippets.reverse_order
+      @snippets = current_account.snippets.last_touched
     end
 
     if params[:search]
