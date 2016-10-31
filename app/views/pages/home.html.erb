@@ -1,22 +1,18 @@
 <div class= 'card-columns'><!--<div class="card-columns">-->
-  <div class="plus-card">
+  <div class="plus-card plus-card-home"><!--card with plus links to form-->
     <div id='new_form_link'>
       <h4 class="card-title">
        <p><%= link_to new_snippet_path, remote: true do %>
           <div class="animated"><i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i></div>
       <% end %>
       </h4>
-  </div>
-</div>
-
-  <div class = 'snippet-card'>
-
-    <div class="card-block" id="snip-title">
-      <h6>Try it out! Click the plus sign to create your first snippet :-)
+      <div class="card-block">
+        <h6>Try it out! Click the plus sign to create your first snippet :-)
         </h6>
-      <div>This will take you to a new page</div>
-  </div>
+        <div>This will take you to a new page</div>
+      </div>
     </div>
+  </div>
 
   <div class = 'snippet-card'>
     <%= render template: 'devise/registrations/new.html.erb' %>
@@ -32,30 +28,19 @@
         <li>Github Flavored Markdown</li>
         <li>Syntax Highlighting</li>
         <li>Tags and Anchors</li>
-        <li>Smart Search in title and content (coming soon: and in tags)</li>
+        <li>Smart Search in title, content, tags and projects </li>
       </ul>
 
       <p>Use Snippety to:
       <ul>
-        <li>Collect code snippets the way you like: with pretty syntax highlighting, annotations and a screenshot</li>
+        <li>Collect code snippets</li>
         <li>Organize everything with tags</li>
-        <li>Jot down ideas for tech talks, blogposts and presentations</li>
-        <li>Collect thoughts and remarks on the projects you are working on (coming soon: with @project tags) </li>
-        <li>Never worry again where you put those smart solutions and best practices.</li>
-        <li>Keep a journal about your professional development and lessons learned</li>
+        <li>Jot down ideas</li>
+        <li>Collect research notes </li>
       </ul>
       </p>
     </div> <!--card block-->
   </div> <!--card-->
-
-  <div class = 'snippet-card'>
-    <div class="card-block" id="snip-title">
-      <h6>Create an account to save your snippets</h6>
-    </div>
-    <div class="card-block">
-      Just because you are playing around now, doesn't mean you have to lose your snippets on sign up. One thing though: if you close your browser before signing up, they will be gone.
-    </div>
-  </div> <!--second card-->
 
   <div class="snippet-card">
     <div class="card-block" id="snip-title">

@@ -1,6 +1,9 @@
 class Snippet < ApplicationRecord
-  validates :title, presence: true
+
+  scope :last_touched, -> { order("updated_at DESC") }
+
   belongs_to :account
+  validates :title, presence: true
 
   acts_as_taggable_on :tags # tagging gem
   acts_as_taggable_on :projects
