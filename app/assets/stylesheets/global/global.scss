@@ -55,7 +55,6 @@ $enable-flex:               true !default; //Why do I need this?
 }
 .plus-card {
   @extend .card;
-  text-align: center;
 
   .fa a {
     color: $brand-primary;
@@ -65,6 +64,7 @@ $enable-flex:               true !default; //Why do I need this?
 .plus-card-home {
   @extend .plus-card;
   @extend .card-outline-success;
+  text-align: center;
 }
 
 
