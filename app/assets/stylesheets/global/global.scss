@@ -20,6 +20,17 @@ $enable-flex:               true !default; //Why do I need this?
   padding-top: 60px;
 } // move content away from navbar
 
+
+trix-editor {
+  min-height: 200px; // override vendor/.../trix.css
+}
+
+trix-toolbar .button_group button, trix-toolbar .button_group input[type=button] {
+  padding: 0px;
+  height: 40px;
+  width: 40px;
+}
+
 //snippet-cards class
 //
 //cards
@@ -55,6 +66,7 @@ $enable-flex:               true !default; //Why do I need this?
 }
 .plus-card {
   @extend .card;
+  text-align: center;
 
   .fa a {
     color: $brand-primary;
@@ -64,7 +76,7 @@ $enable-flex:               true !default; //Why do I need this?
 .plus-card-home {
   @extend .plus-card;
   @extend .card-outline-success;
-  text-align: center;
+
 }
 
 

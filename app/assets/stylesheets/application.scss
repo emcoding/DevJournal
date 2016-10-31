@@ -11,6 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  */
+@import 'trix';
 @import 'global/global';
 //@import 'custom';  //this needs to be before @import bootstrap
 @import 'bootstrap';

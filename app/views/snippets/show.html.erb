@@ -1,15 +1,3 @@
-
-
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Preview</a>
-  </li>
-  <li class="nav-item">
-     <!--TODO add js to load content-->
-    <div class="nav-link"><%= link_to 'Edit', edit_snippet_path(@snippet) %> </div>
-  </li>
-</ul>
-
 <div class="snippet-card">
 
     <div class="card-block" id="snip-title">
@@ -17,7 +5,7 @@
     </div>
 
     <div class="card-block">
-      <%= markdown(@snippet.content).html_safe %>
+      <%= @snippet.content.html_safe %>
       <%= image_tag(@snippet.image_url.to_s) %>
     </div>
 
