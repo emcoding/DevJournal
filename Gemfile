@@ -44,9 +44,10 @@ gem 'mini_magick' # for different versions of an image
 # Remote storage of uploaded files
 gem 'fog-aws'
 
-# Markdown
+# Markdown & text editor
 gem 'redcarpet' # for markdown
 gem 'rouge'     # for syntax highlighting
+gem 'trix'      # wysiwyg editor
 
 # Tags
 gem 'acts-as-taggable-on', :git => 'https://github.com/mbleigh/acts-as-taggable-on'
