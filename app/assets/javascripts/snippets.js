@@ -6,7 +6,7 @@ $(document).on('click', '.snippet-card-clickable', function(event) {
     window.location = this.getAttribute("data-snippet-url");
 });
 
-$(document).on('click', '.snippet-card a', function(event) {
+$(document).on('click', '.snippet-card-clickable a', function(event) {
     event.stopPropagation();
 });
 
