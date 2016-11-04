@@ -14,13 +14,13 @@
   <% @snippets.each do |snippet| %>
     <div class="snippet-card" data-snippet-url= "<%= edit_snippet_path(snippet) %>" >
       <div class="card-block" id="snip-title">
-        <h6><%= link_to snippet.title.capitalize, edit_snippet_path(snippet) %>
+        <h6><%= link_to snippet.title.capitalize, snippet_path(snippet) %>
         </h6>
       </div>
       <!--put image outside of a card-block, to get rid of padding -->
       <%= image_tag(snippet.image_url.to_s, class: "card-img-top img-fluid") %>
       <div class="card-block card-text">
-        <%= snippet.content.html_safe %>
+        <%= markdown(snippet.content).html_safe %>
       </div>
       <div class="card-block">
         <small><%= snippet.created_at.strftime("%B %e") %> </small>
