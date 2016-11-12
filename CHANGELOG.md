@@ -1,5 +1,17 @@
+
+###Fixed
+2016-11-04 (Firmhouse Office Hours)
+- Fix jQuery clickable behaviour 
+- Closed investigation on searching in tags
+
 ### Changed
-Restored search in tags - although still under investigation PR #61
+2016-10-29 (based on usability test Vincent)
+- Restored search in tags - although still under investigation PR #61
+- Changed title in pages to Snippety
+- Click on card itself to open edit form (instead of title link only)
+- Get rid of most text on homepage
+- Change css for different styling homepage cards and account cards
+- Change order on index based on 'last touched' instead of 'created at'
 
 ## Pushed 2016-09-21
 ### Added
