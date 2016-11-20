@@ -10,6 +10,14 @@
         </div>
       </div>
 
+      <div class="input-group">
+        <div class="input-group-addon">
+          <i class ='fa fa-tag'></i>
+        </div>
+        <%= f.text_field :tag_list, placeholder: 'tag1, tag2, one tag, ', value: @snippet.tag_list.to_s%>
+        <%= f.text_field :project_list, value: @snippet.project_list.to_s %>
+      </div>
+
       <div class="card-block">
         <% if @snippet.new_record? %>
             <%= f.button 'Create snippet', class: 'btn btn-primary btn-inverse', data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Snipping ..."} %>

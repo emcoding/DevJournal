@@ -1,4 +1,8 @@
 
+### FIXED
+2016-11-20
+- Restore tag input fields
+
 ## PUSHED 2016-11-12
 ###Fixed
 2016-11-04 (Firmhouse Office Hours)
