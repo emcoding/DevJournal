@@ -1,7 +1,14 @@
 ### Changed
+2016-10-19
 Restored search in tags - although still under investigation PR #61
+2016-10-31 PR 63:
+- Change page titles to Snippety
+- Put plus in 'try it out' -card (or: show form, when the form is nice and clean)
+- Click card to open (in edit -mode)
+2016-10-01:
+- remove redundant token from form
 
-## Pushed 2016-09-21
+## Pushed 2016-09-21 https://web.archive.org/web/20161016185305/http://snippety.herokuapp.com/home
 ### Added
 - Add project tags to snippet. see #15
 - Added and disables search in tags, besides title and content. Under investigation. 
