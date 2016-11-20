@@ -6,13 +6,16 @@
 - Closed investigation on searching in tags
 
 ### Changed
-2016-10-29 (based on usability test Vincent)
+2016-10-29 (based on usability test Vincent) PR #63
 - Restored search in tags - although still under investigation PR #61
 - Changed title in pages to Snippety
 - Click on card itself to open edit form (instead of title link only)
 - Get rid of most text on homepage
 - Change css for different styling homepage cards and account cards
 - Change order on index based on 'last touched' instead of 'created at'
+
+2016-10-01
+- remove redundant token in form 
 
 ## Pushed 2016-09-21 https://web.archive.org/web/20161016185305/http://snippety.herokuapp.com/home
 ### Added
