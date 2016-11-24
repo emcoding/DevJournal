@@ -2,6 +2,8 @@
 ### FIXED
 2016-11-20
 - Restore tag input fields
+2016-11-23
+- Restore File Upload
 
 ## PUSHED 2016-11-12
 ###Fixed
