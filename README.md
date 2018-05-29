@@ -4,21 +4,7 @@ Rails 5
 Ruby 2.3.1
 Postgresql 
 
-Quick start guide  
-*  Fork repo  
-* Copy config/database.yml.example to config/database.yml. Then make sure you modify the settings so it could connect to your postgres server.  
-
-(Inside database.yml add username and password for development and test)    
-
-development:
-  adapter: postgresql
-  database: devjournal_development
-  host: localhost  
-
-*  Install all dependencies:  
-
-`bundle install`  
-`bundle exec rake db:drop db:setup ` 
+Add devise with a 'soft sign up': a user can play around with notes, try out things, then once ready to save a note, create an account. 
 
 
 
