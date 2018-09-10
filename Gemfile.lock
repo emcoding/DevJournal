@@ -81,7 +81,7 @@ GEM
     erubis (2.7.0)
     excon (0.52.0)
     execjs (2.7.0)
-    ffi (1.9.14)
+    ffi (1.9.25)
     fog-aws (0.11.0)
       fog-core (~> 1.38)
       fog-json (~> 1.0)
