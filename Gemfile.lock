@@ -80,7 +80,7 @@ GEM
       responders
       warden (~> 1.2.3)
     erubis (2.7.0)
-    excon (0.52.0)
+    excon (0.71.1)
     execjs (2.7.0)
     ffi (1.11.2)
     fog-aws (0.11.0)
